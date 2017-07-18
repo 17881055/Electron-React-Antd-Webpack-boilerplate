@@ -9,9 +9,10 @@ Electron++React+Antd+Webpack boilerplate
 > npm i
 
 ## Run
-####  $ npm run webpack
+
+>  $ npm run webpack
 ####  您可以在不同的控制台选项卡中同时运行这两个命令：
-####  $ npm run dev
+>  $ npm run dev
 
 
 
