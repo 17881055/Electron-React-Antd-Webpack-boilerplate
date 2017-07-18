@@ -4,7 +4,7 @@ Electron++React+Antd+Webpack boilerplate
 
 ## Install
 #### git clone --depth = 1 https://github.com/17881055/Electron-React-Antd-Webpack-boilerplate.git your-project-name
-#### 注意：要求节点版本> = 7，npm版本> = 4。
+#### 注意：要求node版本> = 7，npm版本> = 4。
 
 > npm i
 
