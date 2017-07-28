@@ -11,6 +11,7 @@
     "url": "https://github.com/17881055"
   },
   "scripts": {
+    "start": "electron .",
     "dev": "concurrently -k -n \"webpack,electron\" \" webpack --config=./webpack.config.js -w\" \"npm run start\"",
 		"webpack": "webpack --config=./webpack.config.js",
 		"package-win": "npm run build --platform=win32 --arch=ia32",
