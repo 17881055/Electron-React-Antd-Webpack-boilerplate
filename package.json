@@ -11,11 +11,11 @@
     "url": "https://github.com/17881055"
   },
   "scripts": {
-    "test": "xo",
-    "start": "electron .",
-    "dev": "electron .",
-    "webpack": "webpack -w",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "dev": "concurrently -k -n \"webpack,electron\" \" webpack --config=./webpack.config.js -w\" \"npm run start\"",
+		"webpack": "webpack --config=./webpack.config.js",
+		"package-win": "npm run build --platform=win32 --arch=ia32",
+		"prebuild": "npm run webpack && rmdir /s/q bin-release",
+		"build": "electron-packager . --overwrite --asar=true  --prune=true --out=release --quiet=true --ignore=node_modules --ignore=node_modules/electron-* --ignore=node_modules/.bin --ignore=.git --ignore=.vscode --ignore=release  --ignore=webpack.config.js --ignore=.editorconfig  --version-string.CompanyName=CE --version-string.FileDescription=CE --download.mirror=https://npm.taobao.org/mirrors/electron/"
   },
   "dependencies": {
     "antd": "^2.12.1",
